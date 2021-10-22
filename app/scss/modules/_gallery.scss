@@ -1,0 +1,73 @@
+.gallery {
+   position: relative;
+   padding: 100px 0 140px;
+   overflow-x: hidden;
+   text-align: center;
+
+   &__slider {
+      position: relative;
+      text-align: center;
+      margin-bottom: 40px;
+   }
+
+   &__wrapper {
+      margin: 0 100px;
+   }
+
+   &__icon {
+      @include align(true, true, absolute);
+      font-size: 24px;
+      color: $green-c;
+   }
+
+   &__item {
+      @include size(430px, 290px);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+   }
+
+   // &__img {
+   //    @include size(100%);
+   //    @include align(true, true, absolute);
+   // }
+      
+   &__text {
+      font-size: 36px;
+      margin-bottom: 75px;
+   }
+
+   &__btn {
+      @include size(70px);
+      @include align(true, false, absolute);
+      cursor: pointer;
+      border-radius: 50px;
+      border: 1px solid $green-c;
+      z-index: 98;
+
+      &--right {
+         right: 15px;
+      }
+
+      &--left {
+         left: 15px;
+      }
+   }
+}
+
+.swiper-slide {
+   width: 430px;
+}
+
+.swiper-pagination {
+   margin-bottom: 100px;
+   &-bullet {
+      @include size(10px);
+      background: #C4C4C4;
+      margin: 0 10px !important;
+      &-active {
+         background: $orange-c;
+         box-shadow: 0px 0px 10px 3px rgba(219, 141, 68, 0.5);
+      }
+   }
+}

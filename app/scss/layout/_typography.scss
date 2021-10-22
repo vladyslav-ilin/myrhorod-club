@@ -1,0 +1,16 @@
+.title {
+   font: 700 48px $font-p;
+   text-transform: uppercase;
+   padding-left: 25px;
+   margin-bottom: 40px;
+   position: relative;
+   display: inline-block;
+
+   &::before {
+      @include size(4px, 50px);
+      @include align(true, false, absolute);
+      content: '';
+      left: 0;
+      background: $orange-c;
+   }
+}
